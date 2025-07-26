@@ -55,7 +55,7 @@ func main() {
     fmt.Printf("Bytes: %x\n", bytes) // Output: Bytes: 01e240
     
     // Create from bytes
-    recovered, err := FromUint24Bytes(bytes)
+    recovered, err := FromUint24Bytes(bytes[:])
     if err != nil {
         log.Fatal(err)
     }
@@ -135,10 +135,10 @@ bytes := value.ToBytes()
 bytes := value.ToLittleEndianBytes()
 
 // Create from bytes (big-endian)
-value, err := FromInt24Bytes(bytes)
+value, err := FromInt24Bytes(bytes[:])
 
 // Create from bytes (little-endian)
-value, err := FromInt24LittleEndianBytes(bytes)
+value, err := FromInt24LittleEndianBytes(bytes[:])
 ```
 
 #### String Representation
