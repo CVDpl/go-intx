@@ -37,10 +37,10 @@ import (
     "fmt"
     "log"
     
-    . "intx/24"  // Import 24-bit types
-    . "intx/40"  // Import 40-bit types
-    . "intx/48"  // Import 48-bit types
-    . "intx/56"  // Import 56-bit types
+    . "github.com/CVDpl/go-intx/24"  // Import 24-bit types
+    . "github.com/CVDpl/go-intx/40"  // Import 40-bit types
+    . "github.com/CVDpl/go-intx/48"  // Import 48-bit types
+    . "github.com/CVDpl/go-intx/56"  // Import 56-bit types
 )
 
 func main() {
@@ -72,7 +72,7 @@ package main
 import (
     "fmt"
     
-    . "intx/24"  // Import only 24-bit types
+    . "github.com/CVDpl/go-intx/24"  // Import only 24-bit types
 )
 
 func main() {
@@ -89,18 +89,16 @@ func main() {
 
 ### Types
 
-+----------+---------+---------------------------------------------------+----------+
-|   Type   |  Size   |                       Range                       | Storage  |
-|----------+---------+---------------------------------------------------+----------+
-| `Int24`  | 24 bits | -8,388,608 to 8,388,607                           | `int32`  |
-| `Uint24` | 24 bits | 0 to 16,777,215                                   | `uint32` |
-| `Int40`  | 40 bits | -549,755,813,888 to 549,755,813,887               | `int64`  |
-| `Uint40` | 40 bits | 0 to 1,099,511,627,775                            | `uint64` |
-| `Int48`  | 48 bits | -140,737,488,355,328 to 140,737,488,355,327       | `int64`  |
-| `Uint48` | 48 bits | 0 to 281,474,976,710,655                          | `uint64` |
-| `Int56`  | 56 bits | -36,028,797,018,963,968 to 36,028,797,018,963,967 | `int64`  |
-| `Uint56` | 56 bits | 0 to 72,057,594,037,927,935                       | `uint64` |
-+----------+---------+---------------------------------------------------+----------+
+| Type | Size | Range | Storage |
+|------|------|-------|---------|
+| `Int24` | 24 bits | -8,388,608 to 8,388,607 | `int32` |
+| `Uint24` | 24 bits | 0 to 16,777,215 | `uint32` |
+| `Int40` | 40 bits | -549,755,813,888 to 549,755,813,887 | `int64` |
+| `Uint40` | 40 bits | 0 to 1,099,511,627,775 | `uint64` |
+| `Int48` | 48 bits | -140,737,488,355,328 to 140,737,488,355,327 | `int64` |
+| `Uint48` | 48 bits | 0 to 281,474,976,710,655 | `uint64` |
+| `Int56` | 56 bits | -36,028,797,018,963,968 to 36,028,797,018,963,967 | `int64` |
+| `Uint56` | 56 bits | 0 to 72,057,594,037,927,935 | `uint64` |
 
 ### Constructors
 
@@ -177,8 +175,8 @@ package main
 import (
     "fmt"
     
-    . "intx/24"  // Import 24-bit types
-    . "intx/40"  // Import 40-bit types
+    . "github.com/CVDpl/go-intx/24"  // Import 24-bit types
+    . "github.com/CVDpl/go-intx/40"  // Import 40-bit types
 )
 
 func main() {
@@ -205,8 +203,8 @@ import (
     "fmt"
     "log"
     
-    . "intx/24"  // Import 24-bit types
-    . "intx/48"  // Import 48-bit types
+    . "github.com/CVDpl/go-intx/24"  // Import 24-bit types
+    . "github.com/CVDpl/go-intx/48"  // Import 48-bit types
 )
 
 type Config struct {
@@ -247,9 +245,9 @@ import (
     "bytes"
     "fmt"
     
-    . "intx/24"  // Import 24-bit types
-    . "intx/40"  // Import 40-bit types
-    . "intx/48"  // Import 48-bit types
+    . "github.com/CVDpl/go-intx/24"  // Import 24-bit types
+    . "github.com/CVDpl/go-intx/40"  // Import 40-bit types
+    . "github.com/CVDpl/go-intx/48"  // Import 48-bit types
 )
 
 type Packet struct {
@@ -308,8 +306,8 @@ package main
 import (
     "fmt"
     
-    . "intx/24"  // Import 24-bit types
-    . "intx/48"  // Import 48-bit types
+    . "github.com/CVDpl/go-intx/24"  // Import 24-bit types
+    . "github.com/CVDpl/go-intx/48"  // Import 48-bit types
 )
 
 func main() {
@@ -356,25 +354,25 @@ You can import only the types you need by importing specific packages:
 
 ```go
 // Import only 24-bit types
-import . "intx/24"
+import . "github.com/CVDpl/go-intx/24"
 u24 := MustUint24(123456)
 
 // Import only 40-bit types  
-import . "intx/40"
+import . "github.com/CVDpl/go-intx/40"
 u40 := MustUint40(123456789012)
 
 // Import only 48-bit types
-import . "intx/48"
+import . "github.com/CVDpl/go-intx/48"
 u48 := MustUint48(123456789012345)
 
 // Import only 56-bit types
-import . "intx/56"
+import . "github.com/CVDpl/go-intx/56"
 u56 := MustUint56(12345678901234567)
 
 // Import multiple types
 import (
-    . "intx/24"
-    . "intx/40"
+    . "github.com/CVDpl/go-intx/24"
+    . "github.com/CVDpl/go-intx/40"
 )
 ```
 
@@ -405,7 +403,7 @@ go-intx/
 
 BSD 3-Clause License
 
-Copyright (c) 2024, go-intx contributors
+Copyright (c) 2025, CVD
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
